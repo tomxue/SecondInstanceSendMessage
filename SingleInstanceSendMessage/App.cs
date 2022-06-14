@@ -75,7 +75,7 @@ namespace SingleInstanceSendMessage
         {
             //IntPtr hWnd = instance.MainWindowHandle;
             //IntPtr hWnd = NativeHelper.FindWindow(null, NativeHelper.GetTitle("SingleInstanceSendMessage"));
-            IntPtr hWnd = NativeHelper.FindWindow(null, "MainWindow_tom123");
+            IntPtr hWnd = NativeHelper.FindWindow(null, "MainWindow_TomTest");
             if (hWnd != IntPtr.Zero)
             {
                 NativeHelper.SendMessage((int)hWnd, arg);

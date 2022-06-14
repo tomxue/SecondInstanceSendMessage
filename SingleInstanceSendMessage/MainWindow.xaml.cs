@@ -33,7 +33,7 @@ namespace SingleInstanceSendMessage
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // MSGFLT_ADD: 1, Adds the message to the filter. This has the effect of allowing the message to be received.
-            _ = NativeHelper.ChangeWindowMessageFilter(NativeHelper.WM_COPYDATA, 1);
+            //_ = NativeHelper.ChangeWindowMessageFilter(NativeHelper.WM_COPYDATA, 1);
         }
 
         public MainWindow(string args) : this()
@@ -54,9 +54,9 @@ namespace SingleInstanceSendMessage
             hs?.AddHook(WindowProc);
         }
 
-        private void HandleCommandlineArgs(string args)
+        private void HandleCommandlineArgs(string arg)
         {
-            if (args == "-search")
+            if (arg == "-search")
             {
                 MessageBox.Show("Get Search Command!");
             }
