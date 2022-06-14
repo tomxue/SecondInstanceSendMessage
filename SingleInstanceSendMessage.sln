@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleInstanceSendMessage", "SingleInstanceSendMessage\SingleInstanceSendMessage.csproj", "{D8732317-B58C-4E27-95C0-5F9146F85DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Debug|x64.ActiveCfg = Debug|x64
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Debug|x64.Build.0 = Debug|x64
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Release|x64.ActiveCfg = Release|x64
+		{D8732317-B58C-4E27-95C0-5F9146F85DAB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2052BD0E-967B-47F1-8A72-1C65B9FBA0EA}
+	EndGlobalSection
+EndGlobal
