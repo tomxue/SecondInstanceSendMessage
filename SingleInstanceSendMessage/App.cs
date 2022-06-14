@@ -56,7 +56,7 @@ namespace SingleInstanceSendMessage
                 {
                     if (process.Id != current.Id)
                     {
-                        //if (process.MainModule.FileName == current.MainModule.FileName)
+                        if (process.MainModule.FileName == current.MainModule.FileName)
                         {
                             return (true, process);
                         }
