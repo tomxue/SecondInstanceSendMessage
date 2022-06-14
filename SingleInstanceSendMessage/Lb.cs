@@ -8,29 +8,6 @@ using System.Threading.Tasks;
 
 namespace SingleInstanceSendMessage
 {
-    public static class Names
-    {
-        public static class CommandLineArgs
-        {
-            public const string Theme = "-theme";
-            public const string Voice = "-voice";
-            public const string Search = "-search";
-
-            public const string Foreground = "-foreground";
-            public const string PreInitialize = "-preInitialize";
-            public const string Exit = "-exit";
-        }
-    }
-
-    public class CommandLineData
-    {
-        [JsonProperty("key")]
-        public string Key { get; set; }
-
-        [JsonProperty("value")]
-        public string Value { get; set; }
-    }
-
     public struct COPYDATASTRUCT
     {
         public IntPtr dwData; //可以是任意值
@@ -152,47 +129,6 @@ namespace SingleInstanceSendMessage
         {
             public uint count;
             public IntPtr binaries;
-        }
-
-        public static bool IsUWPAppInstalled(string packageName)
-        {
-            bool bFound = false;
-            uint uiLastError = NetworkIsolationEnumAppContainers(0, out uint num, out IntPtr ptr);
-            if (uiLastError != 0)
-            {
-                bFound = false;
-            }
-            else
-            {
-                try
-                {
-                    if (num > 0)
-                    {
-                        long num2 = ptr.ToInt64();
-                        for (int i = 0; i < num; i++)
-                        {
-                            INET_FIREWALL_APP_CONTAINER ifacNative = (INET_FIREWALL_APP_CONTAINER)Marshal.PtrToStructure((IntPtr)num2, typeof(INET_FIREWALL_APP_CONTAINER));
-
-                            if (packageName.Equals(ifacNative.appContainerName, StringComparison.OrdinalIgnoreCase))
-                            {
-                                bFound = true;
-                                break;
-                            }
-                            num2 += Marshal.SizeOf(typeof(INET_FIREWALL_APP_CONTAINER));
-                        }
-                    }
-                    else
-                    {
-                        bFound = false;
-                    }
-                }
-                finally
-                {
-                    NetworkIsolationFreeAppContainers(ptr);
-                }
-            }
-
-            return bFound;
         }
         #endregion
     }

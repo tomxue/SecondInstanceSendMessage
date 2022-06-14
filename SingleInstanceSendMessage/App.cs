@@ -96,9 +96,9 @@ namespace SingleInstanceSendMessage
     {
         private readonly string _commandLineArg;
 
-        public App(string args)
+        public App(string arg)
         {
-            _commandLineArg = args;
+            _commandLineArg = arg;
         }
 
         protected override void OnStartup(StartupEventArgs e)
