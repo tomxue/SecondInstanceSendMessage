@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
-	<StartupObject>SingleInstanceSendMessage.EntryPoint</StartupObject>
+	<StartupObject>SecondInstanceSendMessage.EntryPoint</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
